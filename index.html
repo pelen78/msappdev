@@ -353,6 +353,92 @@
             font-weight: 800;
         }
 
+        /* ── MILESTONE CALLOUT IN GOAL 01 ── */
+        .goal-item-01 {
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap: 12px !important;
+        }
+
+        .goal-item-01 > .icon {
+            align-self: flex-start;
+        }
+
+        .goal-01-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+        }
+
+        .goal-item-01 > .icon {
+            margin-top: 2px;
+        }
+
+        /* re-align icon + first line horizontally */
+        .goal-item-01 {
+            display: flex;
+            flex-direction: row !important;
+            align-items: flex-start !important;
+        }
+
+        .milestone-callout {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            background: linear-gradient(135deg, #fff8f0 0%, #fff3ff 100%);
+            border: 1.5px solid #ffd5c2;
+            border-radius: 10px;
+            padding: 14px 18px;
+            flex-wrap: wrap;
+        }
+
+        .milestone-callout-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .milestone-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-family: var(--font-head);
+        }
+
+        .milestone-callout-left p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .milestone-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-family: var(--font-body);
+            font-size: 0.84rem;
+            font-weight: 600;
+            padding: 9px 18px;
+            border-radius: 99px;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+            box-shadow: 0 3px 14px rgba(255, 87, 51, 0.32);
+            transition: transform 0.15s, box-shadow 0.15s;
+            flex-shrink: 0;
+        }
+
+        .milestone-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 87, 51, 0.42);
+        }
+
         /* ── APP ── */
         #mvp ol {
             list-style: none;
@@ -885,9 +971,21 @@
                 day.
             </p>
             <ul class="goal-list">
-                <li>
+                <li class="goal-item-01">
                     <div class="icon" aria-hidden="true">01</div>
-                    <span>Design a basic brand identity using an AI tool: name, logo, colors, and UI ideas</span>
+                    <div class="goal-01-content">
+                        <span>Design a basic brand identity using an AI tool: name, logo, colors, and UI ideas</span>
+                        <div class="milestone-callout">
+                            <div class="milestone-callout-left">
+                                <span class="milestone-tag">📋 Milestone #1</span>
+                                <p>Submit your first logo &amp; interface screenshots using the template below.</p>
+                            </div>
+                            <a href="Milestone1_Template.docx" download class="milestone-btn">
+                                <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
+                                Download Template
+                            </a>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <div class="icon" aria-hidden="true">02</div>
