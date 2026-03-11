@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makerspace Project — Student Edition</title>
+    <title>MakeSpace Project — Student Edition</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
 
@@ -32,6 +32,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            f
         }
 
         html {
@@ -352,7 +353,140 @@
             font-weight: 800;
         }
 
-        /* ── MVP ── */
+        /* ── MILESTONE CALLOUT IN GOAL 01 ── */
+        .goal-item-01 {
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap: 12px !important;
+        }
+
+        .goal-item-01 > .icon {
+            align-self: flex-start;
+        }
+
+        .goal-01-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+        }
+
+        .goal-item-01 > .icon {
+            margin-top: 2px;
+        }
+
+        /* re-align icon + first line horizontally */
+        .goal-item-01 {
+            display: flex;
+            flex-direction: row !important;
+            align-items: flex-start !important;
+        }
+
+        .milestone-callout {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            background: linear-gradient(135deg, #fff8f0 0%, #fff3ff 100%);
+            border: 1.5px solid #ffd5c2;
+            border-radius: 10px;
+            padding: 14px 18px;
+            flex-wrap: wrap;
+        }
+
+        .milestone-callout-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .milestone-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-family: var(--font-head);
+        }
+
+        .milestone-callout-left p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .milestone-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-family: var(--font-body);
+            font-size: 0.84rem;
+            font-weight: 600;
+            padding: 9px 18px;
+            border-radius: 99px;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+            box-shadow: 0 3px 14px rgba(255, 87, 51, 0.32);
+            transition: transform 0.15s, box-shadow 0.15s;
+            flex-shrink: 0;
+        }
+
+        .milestone-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 87, 51, 0.42);
+        }
+
+        .goal-item-side {
+            flex-direction: row !important;
+            align-items: flex-start !important;
+        }
+
+        .goal-side-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .github-note-compact {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            background: #f0f7ff;
+            border: 1.5px solid #c2deff;
+            border-radius: 8px;
+            padding: 11px 15px;
+            font-size: 0.87rem;
+            color: var(--ink);
+        }
+
+        .github-guide-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #fff;
+            background: var(--accent2);
+            text-decoration: none;
+            border-radius: 99px;
+            padding: 6px 14px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: opacity 0.15s, transform 0.15s;
+        }
+
+        .github-guide-btn:hover {
+            opacity: 0.88;
+            transform: translateY(-1px);
+        }
+
+        /* ── APP ── */
         #mvp ol {
             list-style: none;
             counter-reset: mvp;
@@ -523,19 +657,7 @@
             top: 3px;
         }
 
-        .phase-checkpoint {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 14px;
-            background: rgba(6, 214, 160, 0.1);
-            border: 1px solid rgba(6, 214, 160, 0.3);
-            border-radius: 99px;
-            padding: 4px 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #059669;
-        }
+
 
 
 
@@ -842,12 +964,12 @@
     <!-- NAV -->
     <nav role="navigation" aria-label="Main navigation">
         <div class="nav-inner">
-            <a href="#hero" class="nav-logo"><em>maker</em><span>space</span></a>
+            <a href="#hero" class="nav-logo"><em>Make</em><span>Space</span></a>
             <ul class="nav-links">
                 <li><a href="#goals">Goals</a></li>
-                <li><a href="#mvp">MVP</a></li>
+                <li><a href="#mvp">Requirements</a></li>
                 <li><a href="#phases">Phases</a></li>
-                <li><a href="#qa">QA</a></li>
+                <li><a href="#qa">Checklist</a></li>
                 <li><a href="#submission">Submit</a></li>
             </ul>
         </div>
@@ -856,10 +978,10 @@
     <!-- HERO -->
     <section id="hero" aria-labelledby="hero-title">
         <div class="hero-inner">
-            <h1 id="hero-title"><em>Makerspace</em><br>Project</h1>
+            <h1 id="hero-title"><em>MakeSpace</em><br>Project</h1>
             <p class="hero-subtitle">Build &amp; Launch a Web App from Scratch<br>(AI + GitHub + Cloudflare)</p>
-            <p class="hero-desc">In this project, you will build a web app from zero and publish it publicly—like a real
-                product launch. You will use an AI design/editor tool to create branding and UI ideas,
+            <p class="hero-desc">In this project, you will build a web app from zero
+                You will use an AI design/editor tool to create branding and UI ideas,
                 then code the app, document it on GitHub, and deploy it with Cloudflare Pages.</p>
             <div class="badge-row" aria-label="Project tags">
                 <span class="badge badge-outline">Public Launch</span>
@@ -896,17 +1018,38 @@
                 day.
             </p>
             <ul class="goal-list">
-                <li>
+                <li class="goal-item-01">
                     <div class="icon" aria-hidden="true">01</div>
-                    <span>Design a basic brand identity using an AI tool — name, logo, colors, and UI ideas</span>
+                    <div class="goal-01-content">
+                        <span>Design a basic brand identity using an AI tool: name, logo, colors, and UI ideas</span>
+                        <div class="milestone-callout">
+                            <div class="milestone-callout-left">
+                                <span class="milestone-tag">📋 Milestone #1</span>
+                                <p>Submit your first logo &amp; interface screenshots using the template below.</p>
+                            </div>
+                            <a href="https://docs.google.com/document/d/1RxuZmSz8QqlbCK0d57-KtRr68VEIcmLGDO9EHWP_TMM/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="milestone-btn">
+                                <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
+                                Download Template
+                            </a>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <div class="icon" aria-hidden="true">02</div>
                     <span>Build a functional web app using HTML, CSS, and JavaScript</span>
                 </li>
-                <li>
+                <li class="goal-item-side">
                     <div class="icon" aria-hidden="true">03</div>
-                    <span>Use GitHub to manage a repository and publish your code</span>
+                    <div class="goal-side-content">
+                        <span>Use GitHub to manage a repository and publish your code</span>
+                        <div class="github-note-compact">
+                            <span>📌 <strong>Before next class:</strong> upload your files and pick a short repo name.</span>
+                            <a href="github-guide.html" class="github-guide-btn">
+                                <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                                How to set up GitHub
+                            </a>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <div class="icon" aria-hidden="true">04</div>
@@ -914,25 +1057,25 @@
                 </li>
                 <li>
                     <div class="icon" aria-hidden="true">05</div>
-                    <span>Document your app like a real developer — README, screenshots, changelog</span>
+                    <span>Document your app like a real developer: read me, screenshots, changelog</span>
                 </li>
             </ul>
         </div>
     </section>
 
-    <!-- MVP -->
+    <!-- APP -->
     <section id="mvp" aria-labelledby="mvp-title">
         <div class="section-inner">
             <span class="section-label">What's Required</span>
             <h2 id="mvp-title">Minimum Requirements</h2>
             <p class="section-desc">Your app must meet all 7 of these requirements to be considered complete.</p>
             <ol>
-                <li>A clear purpose — solve a small problem or provide a useful tool</li>
-                <li>A homepage with a title, 1–2 sentence description, and navigation/buttons</li>
+                <li>A clear purpose: solve a small problem or provide a useful tool</li>
+                <li>A homepage with a title, 1–2 sentence description, and navigation buttons</li>
                 <li>One main feature that <strong>fully works</strong></li>
-                <li>A clean UI — consistent colors, readable text, good spacing and alignment</li>
+                <li>A clean UI: consistent colors, readable text, good spacing and alignment</li>
                 <li>Responsive layout that looks okay on a phone-sized screen</li>
-                <li>At least 2 empty/error states (e.g., "No results yet", "Please enter a value", "Something went
+                <li>At least 2 empty/error states (ex: "No results yet", "Please enter a value", "Something went
                     wrong")</li>
                 <li>Public deployment using Cloudflare Pages</li>
             </ol>
@@ -990,16 +1133,10 @@
                             <li>Logo in 2 versions (light and dark or full/icon)</li>
                             <li>Color palette with 5 hex codes</li>
                             <li>Font selection (1–2 fonts)</li>
-                            <li>2 UI mockups — Home screen and Main Feature screen</li>
+                            <li>2 UI mockups: Home screen and Main Feature screen</li>
                             <li>Short copy: About section and button/label text</li>
                         </ul>
-                        <div class="phase-checkpoint">
-                            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                stroke-width="2.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Checkpoint: Consistent look and readable contrast
-                        </div>
+
                     </div>
                 </div>
 
@@ -1012,7 +1149,7 @@
                     <div class="phase-body">
                         <div class="phase-header">
                             <span class="phase-number">Phase 3</span>
-                            <h3>Build the MVP</h3>
+                            <h3>Build the APP</h3>
 
                         </div>
                         <ul>
@@ -1023,7 +1160,6 @@
                             <li>Main feature is fully working</li>
                             <li>Layout is responsive on mobile</li>
                             <li>At least 2 empty/error states are handled</li>
-                            <li>1 polish improvement: loading state, validation, or card UI</li>
                         </ul>
                     </div>
                 </div>
@@ -1046,13 +1182,7 @@
                             </li>
                             <li>Changelog with versions: v0.1, v0.2, v1.0</li>
                         </ul>
-                        <div class="phase-checkpoint">
-                            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                stroke-width="2.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Checkpoint: Repo is readable and complete
-                        </div>
+
                     </div>
                 </div>
 
@@ -1071,7 +1201,7 @@
                         <ul>
                             <li>Cloudflare Pages connected to your GitHub repo</li>
                             <li>Live public URL generated and working</li>
-                            <li>QA checklist fully completed</li>
+                            <li>Checklist fully completed</li>
                             <li>Final polish pass done</li>
                         </ul>
                     </div>
@@ -1085,7 +1215,7 @@
     <section id="qa" aria-labelledby="qa-title">
         <div class="section-inner">
             <span class="section-label">Before You Submit</span>
-            <h2 id="qa-title">QA Checklist</h2>
+            <h2 id="qa-title">Checklist</h2>
             <p class="section-desc">Run through every item. You must hit 100% before submitting.</p>
             <div class="checklist-wrap">
                 <div class="checklist-header">
@@ -1166,7 +1296,7 @@
     </section>
 
     <footer>
-        <strong>Makerspace</strong> • Student Edition
+        <strong>MakeSpace</strong> • Student Edition
     </footer>
 
     <!-- BACK TO TOP -->
@@ -1178,7 +1308,7 @@
     </button>
 
     <script>
-        /* ── QA CHECKLIST ── */
+        /* ── CHECKLIST ── */
         const QA_ITEMS = [
             "App loads with no broken layout",
             "Main feature works correctly",
