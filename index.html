@@ -451,7 +451,42 @@
             flex: 1;
         }
 
-        .github-note-compact {
+        .manual-note-compact {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            background: #f5f0ff;
+            border: 1.5px solid #d4b8ff;
+            border-radius: 8px;
+            padding: 11px 15px;
+            font-size: 0.87rem;
+            color: var(--ink);
+        }
+
+        .manual-guide-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #fff;
+            background: #9B5DE5;
+            text-decoration: none;
+            border-radius: 99px;
+            padding: 6px 14px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: opacity 0.15s, transform 0.15s;
+        }
+
+        .manual-guide-btn:hover {
+            opacity: 0.88;
+            transform: translateY(-1px);
+        }
+
+
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -1055,9 +1090,18 @@
                     <div class="icon" aria-hidden="true">04</div>
                     <span>Deploy a live site using Cloudflare Pages</span>
                 </li>
-                <li>
+                <li class="goal-item-side">
                     <div class="icon" aria-hidden="true">05</div>
-                    <span>Document your app like a real developer: read me, screenshots, changelog</span>
+                    <div class="goal-side-content">
+                        <span>Document your app like a real developer: read me, screenshots, changelog</span>
+                        <div class="manual-note-compact">
+                            <span>📄 <strong>Deliverable:</strong> your app must include an <strong>About</strong> section with 6 required elements.</span>
+                            <a href="about-guide.html" class="manual-guide-btn">
+                                <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                                See the checklist
+                            </a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
